@@ -78,6 +78,6 @@ public class JavaQuest1 {
     // code here
     int x = 2;
     int result = e - o * x / y;
-    System.out.println("The result is " + result);
+    System.out.println("The variable result is " + result);
   }
 }
