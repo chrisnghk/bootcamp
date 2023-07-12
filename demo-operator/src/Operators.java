@@ -58,5 +58,10 @@ public class Operators {
         System.out.println("postIncrement 2 = " + postIncrement2);
         System.out.println("n = " + n);
 
+        //Sting +=
+        String str = "hello";
+        str += " world"; // hello world
+        System.out.println(str);
+
     }
 }
