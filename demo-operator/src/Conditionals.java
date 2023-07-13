@@ -66,38 +66,51 @@ public class Conditionals {
     if (isElderly) {
       System.out.println("yes he is elderly");
     }
-  
-  // switch
-  //Simple Versoin 
-  int dayOfWeek = 3;
-  String dayName = "";
-  switch (dayOfWeek){
-    case 1:
-    dayName = "Monday";
-    break; // exit
-    case 2:
-    dayName = "Tuesday";
-    break; // exit
-    case 3:
-    dayName = "Wednesday";
-    break; // exit
-    case 4:
-    dayName = "Thursday";
-    break; // exit
-    case 5:
-    dayName = "Friday";
-    break; // exit
-    case 6:
-    dayName = "Saturday";
-    break; // exit
-    case 7: 
-    dayName= "Sunday";
-    break; // exit
-  }
-  System.out.println("Today is " + dayName);
-  // default 
 
-
+    // switch
+    // Simple Versoin
+    int dayOfWeek = 3;
+    String dayName = "";
+    switch (dayOfWeek) {
+      case 1:
+        dayName = "Monday";
+        break; // exit
+      case 2:
+        dayName = "Tuesday";
+        break; // exit
+      case 3:
+        dayName = "Wednesday";
+        break; // exit
+      case 4:
+        dayName = "Thursday";
+        break; // exit
+      case 5:
+        dayName = "Friday";
+        break; // exit
+      case 6:
+        dayName = "Saturday";
+        break; // exit
+      case 7:
+        dayName = "Sunday";
+        break; // exit
+    }
+    System.out.println("Today is " + dayName);
+    // default
+    char grade2 = 'B';
+    int pocketMoney = 100;
+    switch (grade2) {
+      case 'A':
+        pocketMoney += 100;
+        break;
+      case 'B':
+        pocketMoney += 90;
+        break;
+      case 'C':
+        pocketMoney += 50;
+      default:
+        pocketMoney += 5;
+    }
+    System.out.println("The pocket money is " + pocketMoney);
   }
 
 }
