@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Loops {
   public static void main(String[] args) {
 
@@ -44,10 +46,46 @@ public class Loops {
     }
 
 
+    for (int i = 0; i < 8; i++) {
+      if (i % 2 == 0 && i % 3 == 0) {
+        System.out.println("i is " + i);
+      }
+    }
+
+    // Nested Loop
+    for (int i = 0; i < 4; i++) {
+      for (int j = 0; j < 3; j++) {
+        System.out.println("Hello! i is " + i + " j is " + j);
+      }
+    }
+
+    System.out.println();
+    System.out.println();
+    System.out.println();
+
+
+    for (int i = 0; i < 6; i++) {
+      String count = "";
+      for (int j = 0; j < i; j++) {
+        count += "*";
+        if (i == 5) {
+          System.out.println(count);
+        }
+      }
+
+    }
+
+    System.out.println();
+    System.out.println();
+    System.out.println();
+
+
+
     long finish = System.nanoTime();
     long timeElapsed = finish - start;
 
     System.out.println(
         "used time : " + (double) timeElapsed / 1_000_000_000 + " second");
+
   }
 }
