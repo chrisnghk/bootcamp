@@ -13,9 +13,9 @@ public class JavaQuest8 {
     // Your program should be able to handle all the above test case.
     int secondMax;
     // code
-    int max = -2100000000, temp = 0;
+    int max = -2100000000;
     secondMax = -2100000000;
-    for (int i = 0; i < nums.length; i++) {
+    for (int i = 0; i < nums4.length; i++) {
       if (nums4[i] > max) {
         secondMax = max;
         max = nums4[i];
