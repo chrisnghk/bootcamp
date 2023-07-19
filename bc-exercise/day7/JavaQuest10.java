@@ -45,8 +45,6 @@ public class JavaQuest10 {
         }
       }
       my_array = temp;
-    } else {
-      System.out.println("New Array: " + Arrays.toString(my_array));
     }
     System.out.println("New Array: " + Arrays.toString(my_array));
   }

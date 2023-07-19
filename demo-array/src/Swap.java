@@ -20,7 +20,7 @@ public class Swap {
       System.out.println(arr[i]);
     }
 
-    System.out.println(SwapOddEvenCharacter("a"));
+    System.out.println(SwapOddEvenCharacter("abcd"));
   }
 
   // Swap
@@ -32,30 +32,41 @@ public class Swap {
     // abcdef -> badcfe
     // abc -> bac
     // c -> c
-    char[] str2 = str.toCharArray();
-    char temp2;
-    String sum = "";
-    if (str2.length % 2 == 0) {
-      for (int i = 0; i < str2.length; i = i + 2) {
-        temp2 = str2[i];
-        str2[i] = str2[i + 1];
-        str2[i + 1] = temp2;
-        sum += "" + str2[i] + str2[i + 1];
+
+
+    // char[] str2 = str.toCharArray();
+    // char temp2;
+    // String sum = "";
+    // if (str2.length % 2 == 0) {
+    // for (int i = 0; i < str2.length; i = i + 2) {
+    // temp2 = str2[i];
+    // str2[i] = str2[i + 1];
+    // str2[i + 1] = temp2;
+    // sum += "" + str2[i] + str2[i + 1];
+    // }
+    // return sum;
+    // } else {
+    // for (int i = 0; i < str2.length; i = i + 2) {
+    // if (i +1 == str2.length) {
+    // sum += "" + str2[str2.length - 1];
+    // } else {
+    // temp2 = str2[i];
+    // str2[i] = str2[i + 1];
+    // str2[i + 1] = temp2;
+    // sum += "" + str2[i] + str2[i + 1];
+    // }
+    // }
+    // return sum;
+
+    char[] chars = str.toCharArray();
+    char temp3;
+    for (int i = 0; i < chars.length-1; i++) {
+      if (i % 2 == 0) {
+        temp3 = chars[i];
+        chars[i] = chars[i + 1];
+        chars[i + 1] = temp3;
       }
-      return sum;
-    } else {
-      for (int i = 0; i < str2.length; i = i + 2) {
-        if (i +1 == str2.length) {
-          sum += "" + str2[str2.length - 1];
-        } else {
-          temp2 = str2[i];
-          str2[i] = str2[i + 1];
-          str2[i + 1] = temp2;
-          sum += "" + str2[i] + str2[i + 1];
-        }
-      }
-      return sum;
     }
+    return String.valueOf(chars);
   }
 }
-
