@@ -10,9 +10,7 @@ public class JavaQuest11 {
   // Calculate Delayed Arrival Time
   public static int findDelayedArrivalTime(int arrivalTime, int delayedTime) {
     // code here ...
-    int arrival =
-        (arrivalTime + delayedTime) - ((arrivalTime + delayedTime) / 24) * 24;
-    return arrival;
+    return (arrivalTime + delayedTime) % 24;
   }
 
   public static void main(String[] args) {
