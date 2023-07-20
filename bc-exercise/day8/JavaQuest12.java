@@ -37,11 +37,11 @@ public class JavaQuest12 {
   public static int[] twoSum(int[] source, int tg) {
     int[] output = new int[]{-1,-1};
     for (int i = 0; i < source.length; i++) {
-      for (int j = 0; j < source.length - 1; j++) {
-        if (source[i] + source[j] == tg) {
+      for (int j = 1; j < source.length - 1; j++) {
+        if (source[i] + source[j] == tg && i !=j ) {
           output[0] = i;
           output[1] = j;
-          break;
+          return output ;
         }
       }
     }
