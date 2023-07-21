@@ -24,8 +24,7 @@ public class InsertionSort {
             temp = arr[i];
             arr[i] = arr[j];
             arr[j] = temp;
-            System.out.printf(" i = %s, j = %s \n", i, j);
-            i = j;
+            i = j; // amend to number for compare on next loop
           } 
         }
       }
