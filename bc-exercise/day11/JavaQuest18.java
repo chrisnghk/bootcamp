@@ -15,8 +15,6 @@ public class JavaQuest18 {
     System.out.println(firstPalindrome(testCase3)); // Output : "ADABCCBADA"
     System.out.println(firstPalindrome(testCase4)); // Output : "No Palindrome word in String Array."
 
-    System.out.println(isPalindrome("abcca"));
-
   }
 
   private static boolean isPalindrome(String s) {
