@@ -22,13 +22,8 @@ public class JavaQuest18 {
     //
     for (int i = 0; i < s.length(); i++) {
       if (s.charAt(i) == s.charAt(s.length() - 1 - i)) {
-        if (i == s.length() - 1) {
-          return true;
-        }
-        continue;
-      } else if (s.charAt(i) != s.charAt(s.length() - 1 - i)) {
-        return false;
-      }
+        if (i == s.length() - 1) return true;
+      } else return false;
     }
     return false;
   }
