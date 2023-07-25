@@ -14,18 +14,25 @@ public class JavaQuest18 {
     System.out.println(firstPalindrome(testCase2)); // Output : "racecar"
     System.out.println(firstPalindrome(testCase3)); // Output : "ADABCCBADA"
     System.out.println(firstPalindrome(testCase4)); // Output : "No Palindrome word in String Array."
+
+    System.out.println(isPalindrome("abcca"));
+
   }
 
   private static boolean isPalindrome(String s) {
     // hints : if a String is Palindrome , return true
     //
     for (int i = 0; i < s.length(); i++) {
-      if (s.charAt(i) != s.charAt(s.length() - 1 - i)) {
-        break;
-      } else if ( i == s.length()-1){
-        return true;
+      if (s.charAt(i) == s.charAt(s.length() - 1 - i)) {
+        if (i == s.length() - 1) {
+          return true;
+        }
+        continue;
+      } else if (s.charAt(i) != s.charAt(s.length() - 1 - i)) {
+        return false;
       }
-    }return false;
+    }
+    return false;
   }
 
   public static String firstPalindrome(String[] words) {
