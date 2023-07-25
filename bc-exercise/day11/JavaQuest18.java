@@ -20,9 +20,9 @@ public class JavaQuest18 {
   private static boolean isPalindrome(String s) {
     // hints : if a String is Palindrome , return true
     //
-    for (int i = 0; i < s.length(); i++) {
+    for (int i = 0; i < s.length()/2; i++) {
       if (s.charAt(i) == s.charAt(s.length() - 1 - i)) {
-        if (i == s.length() - 1) return true;
+        if (i == (s.length())/2 - 1) return true;
       } else return false;
     }
     return false;
