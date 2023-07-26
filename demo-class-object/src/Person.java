@@ -1,7 +1,7 @@
 public class Person { // template
   // Descibe the person by attributes
-  int age;
-  char gender;
+  private int age;
+  private char gender;
 
   // ...
 

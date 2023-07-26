@@ -23,6 +23,8 @@ public class demo {
     System.out.println(str); // print Hello
     str.charAt(1);
 
+    Student student = new Student("Eric", "Lau", 30);
+    System.out.println(student.fullName()); Eric LAu
   }
 
 }

@@ -19,14 +19,12 @@ public class JavaQuest17 {
     System.out.println(minimum35Number(3333));// Output : 3333
     System.out.println(minimum35Number(3353));// Output : 3333
     System.out.println(minimum35Number(5535));// Output : 3335
-
   }
 
   // finish the code
   // Hints : int -> String -> array
   public static int minimum35Number(int num) {
-    String str = String.valueOf(num);
-    char[] arr = str.toCharArray();
+    char[] arr = String.valueOf(num).toCharArray();
     int counter = 0;
     for (int i = 0; i < arr.length; i++) {
       if (counter == 2) {

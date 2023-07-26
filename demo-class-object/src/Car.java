@@ -1,5 +1,7 @@
 public class Car {
 
+  // Instance Variables ( Instance -> Object)
+  // Memver Variables
   private int noOfWheel;
   private int capacity;
   private String color;
