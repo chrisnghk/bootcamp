@@ -32,3 +32,8 @@ public class JavaQuest20 {
     return false;
   }
 }
+
+
+
+
+//arr[] = substing(1,length)+substring(0,1);
