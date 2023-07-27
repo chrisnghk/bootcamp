@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class StringBox {
 
   private String string; // String -> Class
@@ -9,7 +11,15 @@ public class StringBox {
   }
 
   public StringBox(String string) {
+    this.string = string;
+  }
 
+  public char[] toCharArray() {
+    char[] arr = new char[this.string.length()];
+    for (int i = 0; i < this.string.length(); i++) {
+      arr[i] = this.string.charAt(i);
+    }
+    return arr;
   }
 
   public void setString(String string) {
@@ -20,17 +30,17 @@ public class StringBox {
     return this.string;
   }
 
-  public StringBox append(String str) {
-    if (str == null || "".equals(str))
+  public StringBox append(String str) { // obj.append()
+    if (str == null || "".equals(str)) // important!!! if "" is null, if reference is null, server will be dead
       return this;
     this.string = this.string + str;
-    return this;
+    // return this.string;
+    return this; // return StringBox object reference
   }
 
-  public StringBox append(String str1, String str2){
 
-    this.string = str1 +" "+ str2;
-    return this;
+  public static StringBox append(String str, String str2) {
+    return new StringBox(str + str2);
   }
 
   public StringBox insert(String str, int idx) {
@@ -53,9 +63,10 @@ public class StringBox {
     s.setString("Java");
     System.out.println(s.append("Python")); // JavaPython
     s.append("javascript").append("HTML").toString();
-    System.out.println(s.insert("testing", 5).toString());
 
-    //String s3 = StringBox.append("Hello", "world").toString();
-
+    String s3 = StringBox.append("Hello", "world").toString();
+    System.out.println(s3);
+    char[] result = s3.toCharArray();
+    System.out.println(Arrays.toString(result));
   }
 }

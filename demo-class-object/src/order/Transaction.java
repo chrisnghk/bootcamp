@@ -7,6 +7,8 @@ public class Transaction {
   private int quantity;
   private double unitPrice;
 
+  //private double discount;
+
   public Transaction(int itemNo, ItemDesc itemDesc, int quantity,
       double unitPrice) {
     this.itemNo = itemNo;
@@ -18,7 +20,7 @@ public class Transaction {
   // getSubtotal(). no new attibarbe
 
   public double getSubtotal() {
-    return (double) this.quantity * this.unitPrice;
+    return this.quantity * this.unitPrice;
   }
 
   public int getItemNo() {
