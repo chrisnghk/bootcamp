@@ -15,16 +15,12 @@ public class JavaQuest23 {
 
   public static boolean sameNumberOfVowels(String s) {
     // code here
-    int count1 = 0,count2 =0;
-    for (int i =0;i < s.length();i++){
-      if( s.charAt(i)=='a' || s.charAt(i)=='e' || s.charAt(i)=='i' || s.charAt(i)=='o'|| s.charAt(i)=='A' || s.charAt(i)=='E' || s.charAt(i)=='I' || s.charAt(i)=='O'  ){
-        if ( i < s.length()/2){
-          count1++;
-        }else{
-          count2++;
-        }
+    int count = 0;
+    for (int i = 0; i < s.length(); i++) {
+      if ("aeiouAEIOU".contains(String.valueOf(s.charAt(i)))) {
+        if (i < s.length() / 2) count++;else count--;
       }
     }
-    return count1==count2;
+    return count == 0;
   }
 }
