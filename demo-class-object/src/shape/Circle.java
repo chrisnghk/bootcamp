@@ -12,7 +12,7 @@ public class Circle {
   private static int counter;// calculate the number of circle objects being created
 
   public Circle() {
-    this.id = AddCounter() + 1;
+    this.id = AddCounter() + 1; 
   }
 
   public int getId() {

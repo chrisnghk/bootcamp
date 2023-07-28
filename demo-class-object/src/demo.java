@@ -24,7 +24,7 @@ public class demo {
     str.charAt(1);
 
     Student student = new Student("Eric", "Lau", 30);
-    System.out.println(student.fullName()); Eric LAu
+    System.out.println(student.fullName());// Eric Lau
   }
 
 }
