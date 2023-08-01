@@ -25,5 +25,4 @@ public abstract class Person {
   // May contain abstract method ( without implementation)
   public abstract void sleep();
 
-
 }
