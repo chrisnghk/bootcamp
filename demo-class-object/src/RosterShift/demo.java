@@ -14,7 +14,6 @@ public class demo {
     System.out.println(Staff.counter);
     Staff[] staffs = new Staff[Staff.counter];
     
-
-
+    StringBuilder sb = new StringBuilder("testing");
   }
 }
