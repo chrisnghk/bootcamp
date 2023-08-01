@@ -1,3 +1,4 @@
+package machines;
 public class Laptop extends Machine {
   // Laptop is subclass (child ),Machine is superclass ( parent )
   // Inhermit Machine attribute(" double weight")
