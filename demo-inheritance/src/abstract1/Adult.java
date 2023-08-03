@@ -1,4 +1,4 @@
-public abstract class Adult extends Person {
+public abstract class Adult extends Runnable {
 
   public Adult() {
     super(); // new Person();

@@ -1,4 +1,7 @@
 package machines;
+
+import java.util.Objects;
+
 public class Laptop extends Machine {
   // Laptop is subclass (child ),Machine is superclass ( parent )
   // Inhermit Machine attribute(" double weight")
@@ -34,6 +37,17 @@ public class Laptop extends Machine {
     super(weight); // super() + this.setWeight(weight);
     this.keyboard = keyboard;
     this.monitor = monitor;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o)
+      return true;
+    if (!(o instanceof Laptop))
+      return false;
+    Laptop laptop = (Laptop) o;
+    return Objects.equals(laptop.keyboard, this.keyboard)
+        && Objects.equals(laptop.monitor, this.monitor);
   }
 
   @Override // Method Overriding

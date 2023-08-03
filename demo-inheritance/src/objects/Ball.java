@@ -24,7 +24,8 @@ public class Ball {
     if (!(o instanceof Ball))
       return false;
     Ball ball = (Ball) o; // downcast
-    return ball.color.equals(this.color); // true or false
+    //return ball.color.equals(this.color); // true or false
+    return Objects.equals(ball.color, this.color);
 
   }
 
@@ -38,9 +39,7 @@ public class Ball {
     Ball b2 = new Ball("Blue"); // address 2
     System.out.println(b1 == b2); // false
     System.out.println(b1.equals(b2)); // true,checking color, instead of memory
-    System.out.println(b1); // toString @ Override
-    System.out.println(b1.toString()); // toString @ Override
+    System.out.println(b1); // toString @ Override [ colur = Blue ]
+    System.out.println(b1.toString()); // toString @ Override [ colur = Blue ]
   }
 }
-
-

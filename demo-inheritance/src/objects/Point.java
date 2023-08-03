@@ -46,6 +46,43 @@ public class Point {
     System.out.println(p3); // toString @ Override address
     System.out.println(p3.toString()); // toString @ Override address
     System.out.println(Points.toString(p3)); // static method
+
+    Long l = 1L; // 1, unbox -> primitive long
+    int i = 1;// 1,auto-box -> Integer
+    Point.print(10L); // long -> autobox -> Long
+    Point.print(Long.valueOf("10"));// Long object
+    // Pointl.print(10); // cannot convert int to Long, compile error
+    Point.print((long) 10); // int -> long -> autobox -> Long
+
+    if (Long.valueOf("100") < 101) {
+      // convert Long 100 -> long 100
+      // 101 -> int
+      // long vs int
+    }
+
+    if (Boolean.valueOf(false) == false) {
+      // right : false -> boolean
+      // left : Boolean false -> boolean false
+      // boolean vs boolean
+    }
+
+    if (Boolean.valueOf(false).equals(false)) {
+      // right : false -> boolean
+      // left : Boolean false -> boolean false
+      // boolean vs boolean
+    }
+
+    // unbox Long,and upcast int
+    System.out.println(l == i); // true, finally long vs int
+    // Big bug here
+    Integer i2 = 1;
+    System.out.println(Objects.equals(l, i)); // false
+  
+
+  }
+
+  public static void print(Long l) {
+    System.out.println("l=" + l);
   }
 
 }

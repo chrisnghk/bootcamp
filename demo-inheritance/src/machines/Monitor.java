@@ -1,4 +1,7 @@
 package machines;
+
+import java.util.Objects;
+
 public class Monitor {
 
   private double length;
@@ -25,4 +28,15 @@ public class Monitor {
     this.width = width;
   }
 
+  @Override
+  public boolean equals(Object o) {
+    if (this == o)
+      return true;
+    if (!(o instanceof Monitor))
+      return false;
+    Monitor monitor = (Monitor) o;
+    return Objects.equals(monitor.length, this.length)
+        && Objects.equals(monitor.width, this.width);
+
+  }
 }
