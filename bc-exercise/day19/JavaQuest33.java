@@ -32,13 +32,10 @@ public class JavaQuest33 {
     int[] arr = new int[nums.length];
     int oddCounter = 0, evenCounter = nums.length - 1;
     for (int i = 0; i < nums.length; i++) {
-      if (nums[i] % 2 == 0) {
-        arr[oddCounter] = nums[i];
-        oddCounter++;
-      } else {
-        arr[evenCounter] = nums[i];
-        evenCounter--;
-      }
+      if (nums[i] % 2 == 0)
+        arr[oddCounter++] = nums[i];
+      else
+        arr[evenCounter--] = nums[i];
     }
     return Arrays.toString(arr);
   }
