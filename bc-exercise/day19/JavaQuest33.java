@@ -31,12 +31,8 @@ public class JavaQuest33 {
   public static String sortArrayByParity(int[] nums) {
     int[] arr = new int[nums.length];
     int oddCounter = 0, evenCounter = nums.length - 1;
-    for (int i = 0; i < nums.length; i++) {
-      if (nums[i] % 2 == 0)
-        arr[oddCounter++] = nums[i];
-      else
-        arr[evenCounter--] = nums[i];
-    }
+    for (int i = 0; i < nums.length; i++) 
+      nums[i] = (nums[i] % 2 == 0) ? arr[oddCounter++]  : arr[evenCounter--] ;
     return Arrays.toString(arr);
   }
 }
