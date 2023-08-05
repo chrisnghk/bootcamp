@@ -7,7 +7,8 @@ public enum Direction { // special keyword since Java1.5
   EAST('E', 90), //
   SOUTH('S', 180), //
   WEST('W', 270), //
-  NORTH('N', 360); //
+  NORTH('N', 360) //
+  ;
 
   private char direction;
   private int degree;
@@ -25,4 +26,14 @@ public enum Direction { // special keyword since Java1.5
     return this.degree;
   }
 
+  public boolean isOppsite(Direction direction) {
+    return Math.abs(this.degree - direction.getDegree()) == 180;
+  }
+
+  public static void main(String[] args) {
+    System.out.println(Direction.EAST.isOppsite(Direction.WEST)); // ture
+    System.out.println(Direction.SOUTH.isOppsite(Direction.NORTH)); // ture
+    System.out.println(Direction.WEST.isOppsite(Direction.WEST)); // false
+
+  }
 }
