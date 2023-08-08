@@ -1,3 +1,5 @@
+// Question 8
+
 class Password implements Secret {
   private String password;
 
