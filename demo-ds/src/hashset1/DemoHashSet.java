@@ -44,11 +44,11 @@ public class DemoHashSet {
     // Example 3:Without Override equals() method
     HashSet<Book> books = new HashSet<>();
     System.out.println(
-        "books.add(new Book(\"Eric\")) = " + books.add(new Book("Eric"))); // true
+        "books.add(new Book(\"Eric\")) = " + books.add(new Book("dummy","Eric"))); // true
     System.out.println(
-        "books.add(new Book(\"Eric\")) = " + books.add(new Book("Eric"))); // true, diff address
+        "books.add(new Book(\"Eric\")) = " + books.add(new Book("dummy","Eric"))); // true, diff address
     System.out.println(
-        "books.add(new Book(\"Steven\")) = " + books.add(new Book("Steven"))); // true, diff address
+        "books.add(new Book(\"Steven\")) = " + books.add(new Book("dummy","Steven"))); // true, diff address
 
 
 

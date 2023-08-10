@@ -24,15 +24,19 @@ import java.util.Arrays;
 
 public class JavaQuest38 {
   public static void main(String[] args) {
-    System.out.println(Arrays.toString(getConcatenation(new int[] {1, 2, 1})));//[1, 2, 1, 1, 2, 1]
+    System.out.println(Arrays.toString(getConcatenation(new int[] {1, 2, 1})));// [1, 2, 1, 1, 2, 1]
     System.out
-        .println(Arrays.toString(getConcatenation(new int[] {1, 2, 3, 4})));//[1, 2, 3, 4, 1, 2, 3, 4]
+        .println(Arrays.toString(getConcatenation(new int[] {1, 2, 3, 4})));// [1, 2, 3, 4, 1, 2, 3, 4]
     System.out
-        .println(Arrays.toString(getConcatenation(new int[] {4, 3, 2, 1})));//[4, 3, 2, 1, 4, 3, 2, 1]
+        .println(Arrays.toString(getConcatenation(new int[] {4, 3, 2, 1})));// [4, 3, 2, 1, 4, 3, 2, 1]
 
   }
 
   public static int[] getConcatenation(int[] nums) {
+    int[] intarr = new int[nums.length * 2];
+    int idx = 0;
+    for (int x : nums)
+      intarr[idx + nums.length] = intarr[idx++] = x;
+    return intarr;
   }
-
 }

@@ -1,0 +1,84 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "DemoArrayList",
+      "request": "launch",
+      "mainClass": "arraylist1.DemoArrayList",
+      "projectName": "bootcamp_be80de0"
+    },
+    {
+      "type": "java",
+      "name": "DemoArrayList2",
+      "request": "launch",
+      "mainClass": "arraylist1.DemoArrayList2",
+      "projectName": "bootcamp_be80de0"
+    },
+    {
+      "type": "java",
+      "name": "DemoArrayList3",
+      "request": "launch",
+      "mainClass": "arraylist1.DemoArrayList3",
+      "projectName": "bootcamp_be80de0"
+    },
+    {
+      "type": "java",
+      "name": "Person",
+      "request": "launch",
+      "mainClass": "arraylist1.Person",
+      "projectName": "bootcamp_be80de0"
+    },
+    {
+      "type": "java",
+      "name": "DemoHashMap",
+      "request": "launch",
+      "mainClass": "hashmap1.DemoHashMap",
+      "projectName": "bootcamp_be80de0"
+    },
+    {
+      "type": "java",
+      "name": "DemoHashMap2",
+      "request": "launch",
+      "mainClass": "hashmap1.DemoHashMap2",
+      "projectName": "bootcamp_be80de0"
+    },
+    {
+      "type": "java",
+      "name": "DemoHashSet",
+      "request": "launch",
+      "mainClass": "hashset1.DemoHashSet",
+      "projectName": "bootcamp_be80de0"
+    },
+    {
+      "type": "java",
+      "name": "DemoHashSet2",
+      "request": "launch",
+      "mainClass": "hashset1.DemoHashSet2",
+      "projectName": "bootcamp_be80de0"
+    },
+    {
+      "type": "java",
+      "name": "DemoQueue",
+      "request": "launch",
+      "mainClass": "queue1.DemoQueue",
+      "projectName": "bootcamp_be80de0"
+    },
+    {
+      "type": "java",
+      "name": "DemoStack",
+      "request": "launch",
+      "mainClass": "stack1.DemoStack",
+      "projectName": "bootcamp_be80de0"
+    }
+  ]
+}
