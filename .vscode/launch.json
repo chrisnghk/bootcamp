@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Helloworld",
+      "request": "launch",
+      "mainClass": "Helloworld",
+      "projectName": "bootcamp_be80de0"
+    },
+    {
+      "type": "java",
+      "name": "Demo",
+      "request": "launch",
+      "mainClass": "revision.Demo",
+      "projectName": "bootcamp_be80de0"
+    },
+    {
+      "type": "java",
+      "name": "AnimalMap",
+      "request": "launch",
+      "mainClass": "map.AnimalMap",
+      "projectName": "bootcamp_be80de0"
+    },
+    {
+      "type": "java",
       "name": "Current File",
       "request": "launch",
       "mainClass": "${file}"
