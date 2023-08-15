@@ -3,6 +3,7 @@ package checked;
 public class Student {
 
   String name;
+  long pocketMoney;
 
   Student() {
 
@@ -18,12 +19,29 @@ public class Student {
     this.name = name;
   }
 
+  public void setPocketMoney(long pocketMoney) throws AmountZeroException {
+    if (pocketMoney <= 0)
+      throw new AmountZeroException("Amount = 0");
+    this.pocketMoney = pocketMoney;
+  }
+
   public static void main(String[] args) {
     Student student = new Student("John");
     try {
-      student.setName("Peterfasfsfa asfsdf"); // if exceptino, throw it to the caller
-    } catch (NameTooLongException e) {
-      System.out.println("Northing happen");
+      // checked exception
+      // int i = 10 / 0;
+      student.setName("Peter"); // if exception, throw it to the caller
+      student.setPocketMoney(-3);
+    } catch (NameTooLongException | AmountZeroException e) {
+      // catch (NameTooLongException e) {
+      System.out.println("Student Setter Issue, message: " + e.getMessage());
+      // System.out.println("Name too Long > 10");
+    } catch (RuntimeException e) {
+      System.out.println(e.getMessage());
+    // } catch (Exception e) {
+    //   System.out.println(e.getMessage());
+    } finally {
+      System.out.println("finnaly"); // Must Run
     }
 
     Student student2 = new Student();
