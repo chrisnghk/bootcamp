@@ -48,6 +48,16 @@ public class JavaQuest39 {
   }
 
   public static String finalString(String s) {
+    StringBuilder sb = new StringBuilder(s);
+    StringBuilder ans = new StringBuilder();
+    int idx = 0;
+    for ( int i = 0 ; i < s.length();i++){
+      if ( sb.charAt(i) == 'i'){
+        sb.substring(idx, i).
+      }
+    }
+    System.out.println(sb.substring(0,3));
     
+    return "";
   }
 }
