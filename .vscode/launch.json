@@ -6,6 +6,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "TestList",
+      "request": "launch",
+      "mainClass": "TestList",
+      "projectName": "bootcamp_be80de0"
+    },
+    {
+      "type": "java",
+      "name": "CarFactory",
+      "request": "launch",
+      "mainClass": "CarFactory",
+      "projectName": "bootcamp_be80de0"
+    },
+    {
+      "type": "java",
+      "name": "Person",
+      "request": "launch",
+      "mainClass": "Person",
+      "projectName": "bootcamp_be80de0"
+    },
+    {
+      "type": "java",
+      "name": "Person",
+      "request": "launch",
+      "mainClass": "swimable.Person",
+      "projectName": "bootcamp_be80de0"
+    },
+    {
+      "type": "java",
       "name": "Helloworld",
       "request": "launch",
       "mainClass": "Helloworld",
