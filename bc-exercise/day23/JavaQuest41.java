@@ -7,11 +7,9 @@
  * 
  * 
  * 
- * Example 1: Input: a = 12, b = 6 Output: 4 
- * Explanation: The common factors of 12 and 6 are 1, 2, 3, 6.
+ * Example 1: Input: a = 12, b = 6 Output: 4 Explanation: The common factors of 12 and 6 are 1, 2, 3, 6.
  * 
- * Example 2: Input: a = 25, b = 30 Output: 2 
- * Explanation: The common factors of 25 and 30 are 1, 5.
+ * Example 2: Input: a = 25, b = 30 Output: 2 Explanation: The common factors of 25 and 30 are 1, 5.
  * 
  * 
  * Constraints:
@@ -32,6 +30,11 @@ public class JavaQuest41 {
   }
 
   public static int commonFactors(int a, int b) {
+    int counter = 0, n = Math.min(a, b);
+    for (int i = 1; i <= n; i++)
+      if (a % i == 0 && b % i == 0)
+        counter++;
+    return counter;
   }
 
 }

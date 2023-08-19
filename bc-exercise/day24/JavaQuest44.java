@@ -19,14 +19,32 @@
  */
 public class JavaQuest44 {
   public static void main(String[] args) {
-    System.out.println(differenceOfSum(new int[] {1, 15, 6, 3})); //9
-    System.out.println(differenceOfSum(new int[] {1, 2, 3, 4})); //0
-    System.out.println(differenceOfSum(new int[] {1995, 1996, 1997, 2000}));//7911
+    System.out.println(differenceOfSum(new int[] {1, 15, 6, 3})); // 9
+    System.out.println(differenceOfSum(new int[] {1, 2, 3, 4})); // 0
+    System.out.println(differenceOfSum(new int[] {1995, 1996, 1997, 2000}));// 7911
 
   }
 
   public static int differenceOfSum(int[] nums) {
-
+    return Math.abs(sumOfElements(nums) - sumOfDigit(nums));
   }
 
+  public static int sumOfElements(int[] nums) {
+    int sum = 0;
+    for (int num : nums)
+      sum += num;
+    return sum;
+  }
+
+  public static int sumOfDigit(int[] nums) {
+    int sum = 0;
+    for (int num : nums) {
+      while (num / 10 != 0) {
+        sum += num % 10;
+        num /= 10;
+      }
+      sum += num;
+    }
+    return sum;
+  }
 }
