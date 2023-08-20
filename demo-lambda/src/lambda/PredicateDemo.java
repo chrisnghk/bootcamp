@@ -1,10 +1,10 @@
 package lambda;
+
 import java.time.LocalDate;
 import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
 public class PredicateDemo {
-
   public static void main(String[] args) throws Exception {
     // developer
     Predicate<Character> isMale = c -> c == 'M';
@@ -15,7 +15,6 @@ public class PredicateDemo {
       }
       return true;
     };
-
     // tester
     test(isMale, 'F', false);
     test(isMale, 'M', true);
@@ -34,13 +33,11 @@ public class PredicateDemo {
     test(equals, null, "", false);
     test(equals, "", "", true);
 
-
     Predicate<LocalDate> isCoolingOff =
         effDate -> effDate.plusMonths(1).isAfter(LocalDate.now());
 
     test(isCoolingOff, LocalDate.of(2023, 7, 16), false);
     test(isCoolingOff, LocalDate.of(2023, 7, 17), true);
-
   }
 
   public static <T> void test(Predicate<T> testcase, T data,

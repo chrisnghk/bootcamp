@@ -1,4 +1,5 @@
 package lambda;
+
 import java.time.LocalDate;
 import java.util.Random;
 import java.util.function.Supplier;
@@ -10,12 +11,13 @@ public class SupplierDemo {
 
     test(now, LocalDate.of(2023, 8, 16));
 
-    Supplier<Integer> random = () -> new Random().nextInt(3); // 0,1,2,3
-    //test(random, 3);
-    System.out.println(random.get());
+    Supplier<Integer> random = () -> new Random().nextInt(3); // 0,1,2
+    // test(random, 3);
+    System.out.println(random.get()); // 0,1,2
   }
 
-  public static <T> void test(Supplier<T> testcase, T result) throws Exception {
+  public static <T> void test(Supplier<T> testcase, T result) //
+      throws Exception {
     if (testcase.get().equals(result))
       return;
     throw new Exception();

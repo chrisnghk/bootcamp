@@ -1,4 +1,6 @@
 package lambda;
+
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Predicate;
 
 public class CombineDemo {
@@ -15,6 +17,6 @@ public class CombineDemo {
     System.out.println(combined2.test("VE")); // true
     System.out.println(combined2.test("AE")); // true
     System.out.println(combined2.test("VA")); // true
-
+    
   }
 }

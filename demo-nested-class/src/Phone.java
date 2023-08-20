@@ -1,4 +1,4 @@
-// Builder Patern Demo
+// Builder Pattern Demo
 public class Phone {
   private String number;
   private Color color;
@@ -16,7 +16,7 @@ public class Phone {
 
   @Override
   public String toString() {
-    return "[number=" + this.number//
+    return "[number=" + this.number //
         + ",color=" + this.color //
         + ",weight=" + this.weight //
         + "]";
@@ -28,21 +28,17 @@ public class Phone {
     private Color color;
     private double weight;
 
-    public Builder() {
-
-    }
-
-    public Builder Number(String number) { // setter
+    public Builder number(String number) { // setter
       this.number = number;
       return this;
     }
 
-    public Builder Color(Color color) { // setter
+    public Builder color(Color color) { // setter
       this.color = color;
       return this;
     }
 
-    public Builder Weight(double weight) { // setter
+    public Builder weight(double weight) { // setter
       this.weight = weight;
       return this;
     }
@@ -50,17 +46,18 @@ public class Phone {
     public Phone build() {
       return new Phone(this);
     }
+  }
 
-    public static void main(String[] args) {
-      // Chain Method: replace different number of rgs constructors
-      Phone phone = Phone.builder()//
-          .Color(Color.GREY) //
-          .Number("1234567") //
-          .Weight(3.7d)//
-          .build();
-      System.out.println(phone);
+  public static void main(String[] args) {
+    // Chain Method: replace different number of args constructors
+    Phone phone = Phone.builder() //
+        .color(Color.GREY) //
+        .number("1234567") //
+        .weight(3.7d) //
+        .build();
+    System.out.println(phone);
 
-      Phone phone2 = Phone.builder().build();
-    }
+    Phone phone2 = Phone.builder().build();
+
   }
 }
