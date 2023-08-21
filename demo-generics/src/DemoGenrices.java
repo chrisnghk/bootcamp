@@ -1,7 +1,9 @@
 
 import java.util.ArrayList;
-
+import java.util.LinkedList;
+import java.util.List;
 import box.*;
+import person.Person;
 import zoo.*;
 
 
@@ -27,10 +29,15 @@ public class DemoGenrices {
         for (double d : d1.getNumbers()) {
             System.out.println(d); // 1.0
         }
+
+        List<Person> string3 = new LinkedList<>();
+        ListABC<Integer> string4 = new ListABC<>();
+
+        ListABC.add(new Person());// static method is independent "generics"
     }
+
 
     public static <T extends Number> Box<T> getBox(T element) {
         return new Box<>(element);
     }
-
 }
