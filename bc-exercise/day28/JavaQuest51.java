@@ -39,16 +39,17 @@ public class JavaQuest51 {
 
   public static List<List<Integer>> largeGroupPositions(String s) {
     List<List<Integer>> res = new ArrayList<>();
-    int count = 0, startIdx = 0;
+    int startIdx = 0;
     for (int i = 0; i < s.length(); i++) {
-      count++;
-      System.out.print(count + " ");
-      if (i != 0 && s.charAt(i - 1) != s.charAt(i)|| i == s.length()-1) {
-        if (count >= 3) {
+      if (i != 0 && s.charAt(i - 1) != s.charAt(i)) {
+        if (i - startIdx >= 3) {
           res.add(List.of(startIdx, (i - 1)));
         }
         startIdx = i;
-        count = 0;
+        continue;
+      }
+      if (i == s.length() - 1 && i - startIdx >= 2) {
+        res.add(List.of(startIdx, (i)));
       }
     }
     return res;
