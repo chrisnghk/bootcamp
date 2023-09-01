@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "PersonLombok",
+      "request": "launch",
+      "mainClass": "PersonLombok",
+      "projectName": "demo-lombok"
+    },
+    {
+      "type": "java",
       "name": "TestList",
       "request": "launch",
       "mainClass": "TestList",
