@@ -110,10 +110,11 @@ insert into employees values ( 102,'Lex','De Haan','LDEHAAN','515-1234569','1987
 insert into employees values ( 103,'Alexander','AHUNOLD','SKING','590-4234567','1987-06-20','MK_REP',9000,0,105,20);
 
 
---  Task 2.3
+--  Task 2.3 write a query to find the location_id, street_address, city, state_province, country_name of locations
+
 SELECT l.location_id,l.street_address,l.city,l.state_province,c.country_name
 FROM locations l, countries c
-;
+where l.country_id = c.country_id
 
 -- Task 2.4
 select first_name, last_name, department_id
