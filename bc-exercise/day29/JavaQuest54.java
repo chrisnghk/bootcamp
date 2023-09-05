@@ -19,6 +19,7 @@
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class JavaQuest54 {
   public static void main(String[] args) {
@@ -42,10 +43,32 @@ public class JavaQuest54 {
   public static List<Integer> twoOutOfThree(int[] nums1, int[] nums2,
       int[] nums3) {
     List<Integer> ans = new ArrayList<>();
-    HashSet set1 = new HashSet<>();
-    
+    Set<Integer> set1 = new HashSet<>();
+    Set<Integer> set2 = new HashSet<>();
+    Set<Integer> set3 = new HashSet<>();
+    Set<Integer> set4 = new HashSet<>();
 
+    for (int num1 : nums1) {
+      set1.add(num1);
+    }
+    for (int num2 : nums2) {
+      set2.add(num2);
+    }
+    for (int num3 : nums3) {
+      set3.add(num3);
+    }
 
+    for (int set : set2) {
+      if (!set1.add(set)) {
+        set4.add(set);
+      }
+    }
+    for (int set : set3) {
+      if (!set1.add(set)) {
+        set4.add(set);
+      }
+    }
+    ans.addAll(set4);
     return ans;
   }
 }
