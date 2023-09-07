@@ -2,6 +2,7 @@ package com.hkjava.bootcamp;
 
 import static org.junit.jupiter.api.Assertions.*;
 import java.time.Duration;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
@@ -16,6 +17,7 @@ public class AssertTest {
     private int x = 0;
 
     @Test
+    @DisplayName("AssertEquals Test")
     void testAssertEqual() {
         // Assertions.assertEquals(actual value, expected value);
         assertEquals(5, App.add(2, 3));
@@ -26,6 +28,7 @@ public class AssertTest {
     }
 
     @Test
+    @DisplayName("AssertNot Equals Test")
     void testAssertNotEqual() {
         assertNotEquals(4, App.add(1, 2));
         x++;
@@ -54,32 +57,32 @@ public class AssertTest {
         assertNotNull(student.getSubjects());
     }
 
-    // @Test
-    // void testAssertThrows() {
-    //     assertThrows(ArithmeticException.class, () -> {
-    //         App.divide(10, 0);
-    //     });
+    @Test
+    void testAssertThrows() {
+        assertThrows(ArithmeticException.class, () -> {
+            App.divide(10, 0);
+        });
 
-    //     assertDoesNotThrow(() -> {
-    //         App.divide(10, 5);
-    //     });
-    // }
+        assertDoesNotThrow(() -> {
+            App.divide(10, 5);
+        });
+    }
 
 
-    // @Test
-    // void testAssertNotTimeout() {
-    //     assertTimeout(Duration.ofMillis(100), () -> {
-    //         Thread.sleep(50);
-    //     });
-    // }
+    @Test
+    void testAssertNotTimeout() {
+        assertTimeout(Duration.ofMillis(100), () -> {
+            Thread.sleep(50);
+        });
+    }
 
-    // @Test
-    // void testCombine() {
-    //     assertAll( //
-    //             () -> assertTrue(10 > 3), //
-    //             () -> assertEquals(10, App.add(4, 6)), //
-    //             () -> assertnull(null)); //
-    // };
+    @Test
+    void testCombine() {
+        assertAll( //
+                () -> assertTrue(10 > 3), //
+                () -> assertEquals(10, App.add(4, 6)), //
+                () -> assertNull(null)); //
+    };
 
     @Test
     void testSame() {
