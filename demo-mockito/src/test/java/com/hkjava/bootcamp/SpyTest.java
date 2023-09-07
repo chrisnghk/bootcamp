@@ -13,7 +13,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
 public class SpyTest {
-  
+
   @Spy
   Calculator calculator;
 
@@ -26,6 +26,11 @@ public class SpyTest {
     int result = checkout.add(3,4);
     Assertions.assertEquals(104,result);
     verify(calculator,times(1)).substract(3,4);
+  }
 
+  @Test
+  void testAdd2() {
+    int result = checkout.add(3, 4);
+    Assertions.assertEquals(3, result); // 4 +
   }
 }

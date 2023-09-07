@@ -16,7 +16,7 @@ import static org.mockito.Mockito.when;
  * Unit test for simple App.
  */
 @ExtendWith(MockitoExtension.class)
-class AppTest {
+class MockTest {
 
   @Mock
   Calculator calculator;
