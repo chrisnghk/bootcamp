@@ -1,5 +1,3 @@
-package com.javahongkong.bootcamp.exercise;
-
 import java.util.HashMap;
 
 public class FurnitureOrder implements FurnitureOrderInterface {
@@ -13,7 +11,7 @@ public class FurnitureOrder implements FurnitureOrderInterface {
      */
     FurnitureOrder() {
         // TODO: Complete the constructor
-        ordersOfFurnitures = new HashMap<>();
+        this.ordersOfFurnitures = new HashMap<>();
     }
 
     public void addToOrder(final Furniture type, final int furnitureCount) {
@@ -29,17 +27,16 @@ public class FurnitureOrder implements FurnitureOrderInterface {
     public float getTotalOrderCost() {
         // TODO: Complete the method
         float sum = 0.0f;
-        for ( var ordersOfFurnitures : this.ordersOfFurnitures.entrySet() ){
-        sum += getTypeCost(ordersOfFurnitures.getKey());
+        for (var ordersOfFurnitures : this.ordersOfFurnitures.entrySet()) {
+            sum += getTypeCost(ordersOfFurnitures.getKey());
         }
         return sum;
     }
 
     public int getTypeCount(Furniture type) {
         // TODO: Complete the method
-        if (this.ordersOfFurnitures.get(type) == null)
-            return 0;
-        return this.ordersOfFurnitures.get(type);
+        return this.ordersOfFurnitures.get(type) == null ? 0
+                : this.ordersOfFurnitures.get(type);
     }
 
     public float getTypeCost(Furniture type) {
@@ -50,8 +47,8 @@ public class FurnitureOrder implements FurnitureOrderInterface {
     public int getTotalOrderQuantity() {
         // TODO: Complete the method
         int sum = 0;
-        for ( var ordersOfFurnitures : this.ordersOfFurnitures.entrySet() ){
-        sum += getTypeCount(ordersOfFurnitures.getKey());
+        for (var ordersOfFurnitures : this.ordersOfFurnitures.entrySet()) {
+            sum += getTypeCount(ordersOfFurnitures.getKey());
         }
         return sum;
     }
