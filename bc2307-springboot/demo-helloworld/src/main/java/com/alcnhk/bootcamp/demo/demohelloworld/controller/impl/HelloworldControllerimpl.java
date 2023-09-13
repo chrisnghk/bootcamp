@@ -13,7 +13,7 @@ import com.alcnhk.bootcamp.demo.demohelloworld.service.HelloworldService;
 @RequestMapping(value = "/api/v1") // version 1 api rest)
 public class HelloworldControllerimpl implements HelloworldController {
 
-  @Autowired
+  @Autowired // Check if any object implementing HellowordService in SpringContext
   HelloworldService helloworldService;
 
   @Override
