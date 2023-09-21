@@ -1,0 +1,13 @@
+POST http://127.0.0.1:8085/api/v1/data/stock
+Content-Type: application/json
+
+{
+    "country":"AA",
+    "companyName":"Test1",
+    "ipoDate":"2023-01-01",
+    "logo":"abc",
+    "marketCap":22.22,
+    "currency":"USV"
+}
+
+

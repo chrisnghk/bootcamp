@@ -1,0 +1,11 @@
+PUT http://127.0.0.1:8085/api/v1/data/stock/7
+Content-Type: application/json
+
+{
+    "country":"up",
+    "companyName":"update test",
+    "ipoDate":"2023-02-02",
+    "logo":"hello",
+    "marketCap":99.99,
+    "currency":"HKG"
+}

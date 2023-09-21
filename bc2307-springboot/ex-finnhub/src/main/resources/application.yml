@@ -1,0 +1,11 @@
+server:
+  port: 8085
+
+api:
+  finnhub:
+    domain: "finnhub.io"
+    stockprofile2endpoints: "/api/v1/stock/profile2"
+    quoteendpoints: "/api/v1/quote"
+    api-token: "ck4fng1r01qus81pv5jgck4fng1r01qus81pv5k0"
+# https://finnhub.io/api/v1/quote?symbol=AAPL&token=ck4fng1r01qus81pv5jgck4fng1r01qus81pv5k0
+# https://finnhub.io/api/v1/stock/profile2?symbol=AAPL&token=ck4fng1r01qus81pv5jgck4fng1r01qus81pv5k0
