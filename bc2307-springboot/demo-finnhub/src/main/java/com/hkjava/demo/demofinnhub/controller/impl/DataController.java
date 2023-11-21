@@ -6,7 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.hkjava.demo.demofinnhub.controller.DataOperation;
 import com.hkjava.demo.demofinnhub.entity.Stock;
+import com.hkjava.demo.demofinnhub.entity.StockPrice;
 import com.hkjava.demo.demofinnhub.service.CompanyService;
+import com.hkjava.demo.demofinnhub.service.StockPriceService;
 
 @RestController
 @RequestMapping(value = "/api/v1")
@@ -15,9 +17,17 @@ public class DataController implements DataOperation {
   @Autowired
   private CompanyService companyService;
 
+  @Autowired
+  private StockPriceService stockPriceService;
+
   @Override
   public List<Stock> findAll() {
     return companyService.findAll();
+  }
+
+  @Override
+  public List<Stock> findByCountryAndMarketCap(String country, double marketCap) {
+    return companyService.findByCountryAndMarketCap(country, marketCap);
   }
 
   @Override
@@ -38,6 +48,11 @@ public class DataController implements DataOperation {
   @Override
   public void updateCompanyNameById(Long id, String companyName) {
     companyService.updateCompanyNameById(id, companyName);
+  }
+
+  @Override
+  public StockPrice save(Long id, StockPrice stockPrice) {
+    return stockPriceService.save(id, stockPrice);
   }
 
 }

@@ -1,0 +1,3 @@
+https://finnhub.io/api/v1/stock/profile2
+?symbol=AAPL
+&token=ck4fng1r01qus81pv5jgck4fng1r01qus81pv5k0
